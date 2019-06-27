@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>一汽丰田</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+		<script>
+			document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + "px";
+			window.addEventListener("resize", function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + "px"
+			}, false)
+		</script>
+		<script>
+			var _hmt = _hmt || [];
+					(function() {
+					  var hm = document.createElement("script");
+					  hm.src = "https://hm.baidu.com/hm.js?4fbf439aebc04552d0cfc75523cb3fab";
+					  var s = document.getElementsByTagName("script")[0]; 
+					  s.parentNode.insertBefore(hm, s);
+					})();
+		</script>
+		<link rel="stylesheet" href="css/liuzi.css">
+	</head>
+	<body>
+		<div class="big" style="background: url('img2/liuzi.png') no-repeat;background-size: 100% 100%;">
+			<ul class="list">
+				<li>
+					<div class="list_box">
+						<span>员工姓名</span>
+						<p>
+							<input type="text" placeholder="请输入员工姓名" id="order_name">
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="list_box">
+						<span>手机号码</span>
+						<p>
+							<input type="text" placeholder="请输入手机号码" id="order_phone">
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="list_box">
+						<span>省&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份</span>
+						<p>
+							<select id="ftms_province" name="order_pro" dir="rtl"></select>
+						</p>
+					</div>
+
+				</li>
+				<li>
+					<div class="list_box">
+						<span>城&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市</span>
+						<p>
+							<select id="ftms_city" name="order_city" dir="rtl">
+								<option>请选择城市</option>
+							</select>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="list_box">
+						<span>经&nbsp;销&nbsp;商</span>
+						<p>
+							<select id="ftms_dealer" name="ftms_dealer" dir="rtl">
+								<option>选择对应的经销商</option>
+							</select>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="list_box">
+						<span>意向车型</span>
+						<p>
+							<select id="ftms_car" name="ftms_car" dir="rtl">
+							</select>
+						</p>
+					</div>
+				</li>
+
+				<li>
+					<div class="list_box">
+						<span>意向购车时间</span>
+						<p>
+							<select id="ftms_buying_time" name="ftms_buying_time" dir="rtl"></select>
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="submit_box">
+				<img src="img2/submit.png" id="order_btn" class="dianji">
+			</div>
+			<div class="success">
+				<div class="succ_big">
+					<div class="succ_box">
+						<p class="box_one"><img src="img2/dui.png" class="dui">提交成功!</p>
+						<p class="box_two">
+							<span></span>
+							请您保持手机畅通
+							<span></span>
+						</p>
+						<img src="img2/liaojie.png" class="ok">
+						<img src="img2/erwei_code.png" class="erwei">
+					</div>
+					<div class="yinc"><img src="img/need/x.png" class="yinc_img"></div>
+				</div>
+			</div>
+			<div class="rule">
+				<div class="rule_box">
+					<img src="img2/news.png" class="news">
+					<div class="rule_con">请您完善信息</div>
+					<img src="img2/okk.png" class="okk">
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="http://api.ftms.com.cn/Public/Admin/Js/region.car-1.2.js"></script>
+	<script>
+		$(function() {
+
+			$('body').height($('body')[0].clientHeight);
+
+		});
+		var type='';
+		function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var reg_rewrite = new RegExp("(^|/)" + name + "/([^/]*)(/|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			var q = window.location.pathname.substr(1).match(reg_rewrite);
+			if (r != null) {
+				return unescape(r[2]);
+			} else if (q != null) {
+				return unescape(q[2]);
+			} else {
+				return null;
+			}
+		}
+		var bid=getQueryString("modFlag");
+		console.log(bid)
+		if(bid=='dianwang'){
+			type='国家电网'
+		}else if(bid=='zhonghua'){
+			type='中国中化集团'
+		}else if(bid=='shiyou'){
+			type='中国石油化工集团'
+		}else if(bid=='renmin'){
+			type='中国人民财产保险股份'
+		}else if(bid=='dianke'){
+			type='中国电子科技集团'
+		}else if(bid=='pingan'){
+			type='中国平安保险（集团）股份'
+		}else if(bid=='tianran'){
+			type='中国石油天然气集团'
+		}else if(bid=='taipy'){
+			type='中国太平洋保险'
+		}
+		console.log(type)
+		$('.dianji').click(function() {
+			window.scrollTo(0, document.body.scrollTop + 1);
+			document.body.scrollTop >= 1 && window.scrollTo(0, document.body.scrollTop - 1);
+
+			var name = $('#order_name').val();
+			var phone = $('#order_phone').val();
+			var provinceid = $("select[name='order_pro']").find("option:selected").val();
+			var provincename = $("select[name='order_pro']").find("option:selected").text();
+			var cityid = $("select[name='order_city']").find("option:selected").val();
+			var cityname = $("select[name='order_city']").find("option:selected").text();
+			var j_id = $("select[name='ftms_dealer']").find("option:selected").val();
+			var j_name = $("select[name='ftms_dealer']").find("option:selected").text();
+			var buy_time = $("select[name='ftms_buying_time']").find("option:selected").text();
+			var levelId = $("select[name='ftms_buying_time']").find("option:selected").val();
+			var buy_car = $("select[name='ftms_car']").find("option:selected").text();
+			var seriesid = $("select[name='ftms_car']").find("option:selected").val();
+
+			console.log(provinceid)
+			// alert(name);
+
+			if (name && phone && provinceid && provincename && cityid && cityname && j_id && j_name && buy_time && levelId &&
+				buy_car && seriesid) {
+				if (name.match(/^\s+$/)) {
+					$('.rule_con').html('请您完善信息')
+					$('.rule').css('display', 'block')
+					return;
+				} else if (phone.match(/^\s+$/)) {
+					// alert('请填写电话')
+					$('.rule_con').html('请您输入正确的手机号码')
+					$('.rule').css('display', 'block')
+					return;
+				} else if (phone.length != 11) {
+					$('.rule_con').html('请您输入正确的手机号码')
+					$('.rule').css('display', 'block')
+					return;
+				} else if (!(/^1[34578]\d{9}$/.test(phone))) {
+					$('.rule_con').html('请您输入正确的手机号码')
+					$('.rule').css('display', 'block')
+					return false;
+				} else if (provincename == "请选择省份") {
+					$('.rule_con').html('请您选择省份')
+					$('.rule').css('display', 'block')
+					return;
+				} else if (cityname == "请选择城市") {
+					$('.rule_con').html('请您选择城市')
+					$('.rule').css('display', 'block')
+					return;
+				} else if (j_name == "选择经销商") {
+					$('.rule_con').html('请您选择经销商')
+					$('.rule').css('display', 'block')
+					return;
+				} else if (buy_car == "请选择车系") {
+					$('.rule_con').html('请您选择车系')
+					$('.rule').css('display', 'block')
+					return;
+				}
+				$.ajax({
+					url: 'http://php.m.ftms.com.cn/index.php?g=Fawtoyota&m=Subscribe&a=add',
+					// url: 'http://intf.aliactivity.test511.com/index.php?g=Fawtoyota&m=Subscribe&a=add',
+					data: {
+						name: name,
+						phone: phone,
+						provinceid: provinceid,
+						provincename: provincename,
+						cityid: cityid,
+						cityname: cityname,
+						j_id: j_id,
+						j_name: j_name,
+						buy_time: buy_time,
+						levelId: levelId,
+						buy_car: buy_car,
+						seriesid: seriesid,
+						gs_type: type
+					},
+					dataType: "json",
+					success: function(data) {
+						console.log(data)
+						if (data.status == 200) {
+							$('.success').css('display', 'block')
+						}
+
+					},
+					error: function(err) {
+						console.log(err)
+					}
+
+				});
+
+			} else {
+				$('.rule_con').html('请您完善信息')
+				$('.rule').css('display', 'block')
+			}
+
+		})
+		$('.ok').click(function() {
+			$('.success').css('display', 'none')
+			window.location.href = 'https://m.ftms.com.cn/'
+		})
+		$('.yinc_img').click(function() {
+			$('.success').css('display', 'none')
+		})
+		$('.okk').click(function() {
+			$('.rule').css('display', 'none')
+		})
+	</script>
+	<script>
+		var height = document.body.clientHeight;
+		// alert(height)
+		if (height <= 603) {
+			$('.list').css('margin-top', '0.34rem')			
+			$('.list li').css('margin-top', '0.2rem')		
+			$('.submit_box').css('margin-top','0.56rem')
+		}
+	</script>
+</html>

@@ -1,0 +1,277 @@
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100vw;
+	height:100vh;
+}
+	
+
+.my_box {
+	height: 100%;
+	text-align: center;
+	background: url('../img/need/bg.png') no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+	
+}
+.mscBtn{
+	position: absolute;
+	top: 0.8rem;
+	right: 0.3rem;
+}
+.bg_img{
+	width: 100%;
+	
+}
+.my_needbg {
+	width: 100%;
+	height: 100%;
+}
+
+.my_btn {
+	width: 3.92rem;
+	height: 0.83rem;
+	position: fixed;
+	left: 50%;
+	margin-left: -1.96rem;
+	bottom: 2.34rem;
+	z-index: 1;
+}
+
+.my_car {
+	width: 7.33rem;
+	height: 1.15rem;
+	z-index: 1;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	margin-top: -0.4rem;
+}
+
+.link_role {
+	color: #0a77ca;
+	font-size: 0.36rem;
+	position: fixed;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	display: flex;
+	align-items: center;
+}
+.link_role>img{
+	width: 0.32rem;
+	height: 0.36rem;
+	margin-left: 0.05rem;
+}
+.xialala {
+	color: #0a77ca;
+	font-size: 0.26rem;
+	position: fixed;
+	bottom: 9%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+.my_block {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	z-index: 11;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+/* 弹框 */
+.my_case {
+	display: none;
+	width: 90%;
+	 height: 10.16rem; 
+	position: fixed;
+	z-index: 111;
+	top: 0;
+	bottom: 0;
+	background: red;
+	background: url(../img/need/case.png) no-repeat;
+	background-size: 100%;
+	 margin: auto; 
+}
+
+.my_case_cont_box {
+	padding: 0 0.7rem;
+	position: relative;
+	box-sizing: border-box;
+}
+	
+.my_case_cont_box>.left_tu{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 1.7rem;
+	height: 1.05rem;
+}
+.my_case_cont_box>.right_cha{
+	position: absolute;
+	top: 0.2rem;
+	right: 0.5rem;
+	width: 0.3rem;
+	height: 0.31rem;
+}
+
+.my_case_img {
+	text-align: center;
+}
+.need_x{
+	position: absolute;
+	margin-top: 0;
+	top: 10rem;
+	width: 100%;
+	text-align: center;
+}
+
+
+.my_case_title {
+	width: 2.58rem;
+	margin: 0.55rem 0 0rem 0;
+}
+
+.my_case_cont_box p {
+	font-size: 0.2rem;
+	color: #875940;
+	text-align: left;
+	line-height: 0.3rem;
+}
+
+.my_list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.my_list li {
+	width: 50%;
+	text-align: left;
+	font-size: 0.16rem;
+	color: #875940;
+	line-height: 0.3rem;
+	display: flex;
+	align-items: center;
+}
+.my_list li span{
+	font-size: 0.5rem;
+}
+.my_case_cont_box .my_small {
+	width: 1.06rem;
+	height: 0.32rem;
+	line-height: 0.32rem;
+	background: #875940;
+	color: #fff;
+	text-align: center;
+	margin: 0.16rem 0;
+}
+
+.cur {
+	cursor: pointer;
+}
+
+.my_case_btn {
+	width: 3.7rem;
+}
+
+.xx {
+	width: 0.73rem;
+	height: 0.73rem;
+}
+
+.my_case_cont_box .my_18 {
+	font-size: 0.18rem;
+}
+
+.my_hao {
+	width: 0.2rem;
+	height: 0.2rem;
+	margin-right: 0.1rem;
+}
+.xianshi_box{
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+	margin: auto;
+	position: relative;
+}
+.xianshi {
+	width: 100%;
+	height: 3.5rem;
+	overflow: hidden;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.yidong{
+	width: 90%;
+	height: 2.8rem;
+	text-align: center;
+	margin:auto;
+}
+	
+.yidong img{
+	width: 100%;
+	height: 100%;
+}
+.che{
+	position: absolute;
+	width: 1.41rem;
+	height: 0.47rem;
+	left: -10%;
+	top: 2.35rem;
+}
+.che img{
+	width: 100%;
+	height: 100%;
+}
+#parent {
+	border: 1px #3896dd solid;
+	width: 100%;
+	height: 0.16rem;
+	margin: 0 auto;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+#child {
+	width: 100%;
+	height: 100%;
+	background-color: #3896dd;
+}
+
+#info {
+	text-align: center;
+	color: #3896dd;
+	font-size: 0.28rem;
+	margin-top: 0.1rem;
+}
+.guding {
+	width: 100%;
+	overflow-y: hidden;
+	/*为了兼容普通PC的浏览器*/
+	height: 100%;
+	position: fixed;
+}
+.fenge{
+	width: 94%;
+	height: 1px;
+	background: #a98a6c;
+	margin: 0.2rem auto;
+}

@@ -1,0 +1,247 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+.big {
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+
+.list {
+	width: 6.73rem;
+	/* height: 77%; */
+	margin: 0.94rem auto 0;
+	overflow: hidden;
+}
+
+.list li {
+	width: 6.68rem;
+	height: 0.9rem;
+	/* background-color: #f1f0f1; */
+	border: solid 1px #cda975;
+	border-radius: 0.5rem;
+	margin-top: 0.23rem;
+	position: relative;
+	background: rgba(0,0,0,0.4);
+	padding: 0 0.4rem;
+	box-sizing: border-box;
+}
+
+.list li .list_box {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+}
+
+
+input::-webkit-input-placeholder {
+	color: #6d6d6d;
+	font-size: 0.28rem;
+}
+.list li span{
+	font-size: 0.28rem;
+	color: #cea975;
+}
+.list li p {
+	width: 3rem;
+	font-size: 0.24rem;
+	color: #999999;
+	margin: 0 !important;
+	text-align: right;
+}
+.list li p input {
+	width: 100%;
+	font-size: 0.28rem;
+	color: #999999;
+	outline: none;
+	background: none;
+	border: 0px;
+	height: 100%;
+	text-align: right;
+}
+.list li p select {
+	width: 100%;
+	outline: none;
+	background: none;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: 0px;
+	background: url('../img/xiala.png') no-repeat scroll right center transparent;
+	background-size: 7% 31%;
+	padding-right: 0.14rem;
+	font-size: 0.28rem;
+	color: #6d6d6d;
+	text-align: right;
+	padding: 0 0.3rem 0 0;
+	box-sizing: border-box;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.submit_box {
+	width: 6.68rem;
+	margin: 0.66rem auto 0;
+	height: 0.9;
+}
+
+.submit_box img {
+	width: 100%;
+	height: 100%;
+}
+
+.success {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+}
+.succ_big{
+	width: 6.25rem;
+	height: 9rem;
+	top: 0;
+	bottom: 0;
+	left: 0.625rem;
+	 margin: auto; 
+	 position: absolute;
+	 display: flex;
+	 justify-content: space-between;
+	 flex-direction: column;
+}
+.success .succ_box {
+	width: 100%;
+	height: 7.3rem;
+	/*left: 0.625rem;*/
+	/* margin: auto; */
+	overflow: hidden;
+	background: url('../img2/success.png') no-repeat;
+	background-size: 100% 100%;
+}
+
+.success .succ_box .box_one {
+	width: 43%;
+	font-size: 0.49rem;
+	color: #996f22;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.25rem auto 0;
+}
+	
+.success .succ_box .box_one .dui{
+	width: 0.5rem;
+}
+.success .succ_box .box_two {
+	font-size: 0.34rem;
+	color: #996f22;
+	text-align: center;
+	width: 63%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0.34rem auto 0;
+}
+.success .succ_box .box_two span{
+	width: 0.4rem;
+	height: 1px;
+	background: #95703c;
+}
+.success .succ_box .ok {
+	width: 3.41rem;
+	height: 0.85rem;
+	display: block;
+	margin: auto;
+	margin-top: 0.65rem;
+}
+.success .succ_box .erwei{
+	width: 2.29rem;
+	height: 2.31rem;
+	display: block;
+	margin: auto;
+	margin-top: 0.38rem;
+}
+.success .yinc{
+	width: 100%;
+	text-align: center;
+	display: block;
+	/*margin-top: 0.5rem;*/
+}
+.success .yinc img{
+	width: 0.73rem;
+}
+.rule {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+}
+
+.rule .rule_box {
+	/* width: 5.89rem; */
+	width: 4.99rem;
+	height: 4.15rem;
+	background-color: #ffffff;
+	border-radius: 0.15rem;
+	/* margin: 0.4rem auto 0; */
+	top: 0;
+	bottom: 0;
+	left: 1.255rem;
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+	background: url('../img2/wanshan.png') no-repeat;
+	background-size: 100% 100%;
+}
+.news{
+	width: 0.93rem;
+	height: 0.93rem;
+	display: block;
+	margin: 0.6rem auto 0;
+}
+.rule_box div {
+	font-size: 0.36rem;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #996f22;
+	text-align: center;
+	margin-top: 0.4rem;
+}
+
+.rule_box .okk {
+	width: 2.96rem;
+	height: 0.74rem;
+	display: block;
+	margin: 0.52rem auto 0;
+}
+
+.fancybox-lock-test {
+	overflow-y: hidden;
+	/*为了兼容普通PC的浏览器*/
+	height: 100%;
+	position: fixed;
+	left: 1.035rem;
+}

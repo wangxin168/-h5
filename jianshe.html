@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>一汽丰田</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script src="http://api.ftms.com.cn/Public/Admin/Js/region.car-1.2.js"></script>
+		<script>
+			document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + "px";
+			window.addEventListener("resize", function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + "px"
+			}, false)
+		</script>
+		<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b9e6d93e7b9efbb25c2e25a40d3407ba";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+		<link rel="stylesheet" href="css/swiper-4.3.3.min.css">
+		<script src="js/swiper-4.3.3.min.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/tian.css">
+		<link rel="stylesheet" type="text/css" href="css/need.css" />
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	</head>
+
+	<body>
+		<div class="xianshi_box">
+			<div class="xianshi">
+				<div class="yidong"><img src="img/yidong.png"></div>
+				<div class="che"><img src="img/che.png"></div>
+				<div id="parent">
+					<div id="child"></div>
+				</div>
+				<p id="info"></p>
+			</div>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="my_box">
+						<a class="mscBtn" style="cursor:pointer;">
+							<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+							<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+						</a>
+						<audio id="bgMusic" src="To%20The%20Top_try_1.mp3" preload="auto" autoplay="autoplay"></audio>
+						<!-- <img src="img/need/bg.png" alt="" class="my_needbg"> -->
+						<img src="img/need/jianshe.png" class="bg_img">
+						<img src="img/car.png" class="my_car">
+						<p class="link_role cur" id="look_role">查看活动规则<img src="img/fan.png"></p>
+						<img src="img/xiala-2.png" class="xialala" style="width: 0.34rem;height: 0.18rem;">
+					</div>
+					<div class="my_block" id="my_block"></div>
+
+					<div class="my_case" id="my_case">
+						<div class="my_case_cont_box">
+							<div class="my_case_img" style="margin-bottom: 0.37rem;">
+								<img src="img/need/jianshe_title.png" alt="" class="my_case_title" style="width: 3.2rem;">
+							</div>
+							<p>1、参与互动并留下个人信息，即可享受优惠。</p>
+							<p>2、优惠仅限购买所选车型，不可更改。</p>
+							<p>3、享受优惠时，需要提供员工身份证、中国建设银行相关单位的在职证明（格式不限，但需包含公司名称、地址、联系人姓名和座机号）、直系亲属关系证明（仅限牌城市可直系亲属购车）。</p>
+							<p>4、与一汽丰田其他活动不冲突，可共享。</p>
+							<p class="my_small">优惠政策</p>
+							<ul class="clearfix my_list">
+								<li><span>·</span>RAV4 荣放 立减3000元</li>
+								<li><span>·</span>CROWN 皇冠 立减5000元</li>
+								<li><span>·</span>IZOA 奕泽 立减3000元</li>
+								<li><span>·</span>COROLLA 卡罗拉 立减1000元</li>
+								<li><span>·</span>卡罗拉双擎 立减1000元</li>
+								<li><span>·</span>VIOS威驰/FS立减1000元</li>
+								<li><span>·</span>卡罗拉双擎E+立减5000元</li>
+							</ul>
+							<div class="fenge"></div>
+							<p class="my_18"><img src="img/need/hao.png" alt="" class="my_hao">活动说明 ：在经销店最终议价基础上从车款中立减以上优惠政策。</p>
+							<div class="my_case_img" style="margin-top: 2.2rem; margin-bottom: 0.5rem;">
+								<img src="img/need/btn_need.png" alt="" class="my_case_btn cur img_box" onclick="get_link()">
+							</div>
+							<img src="img/need/left.png" class="left_tu">
+							<img src="img/need/right.png" class="right_cha" id="xx">
+						</div>
+						<!-- <div class="my_case_img need_x">
+							<img src="img/need/x.png" alt="" class="xx" >
+						</div> -->
+					</div>
+				</div>
+				<div class="swiper-slide one">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/1.png">
+					<img src="img/11.png" class="ka">
+					<img src="img/11_con.png" class="one_con">
+					<div class="xiala"><img src="img/xiala-2.png" style="width: 0.34rem;"></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 82%;z-index:0;">
+				</div>
+				<div class="swiper-slide two">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/2.png">
+					<img src="img/22.png" class="huang">
+					<img src="img/22_con.png" class="two_con">
+					<div class="xiala"><img src="img/xiala-2.png" style="width: 0.34rem;"></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 82%;z-index:0;">
+				</div>
+				<div class="swiper-slide three">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/3333.jpg">
+					<img src="img/33.png" class="luo">
+					<img src="img/33_con.png" class="three_con">
+					<div class="xiala"><img src="img/xiala-2.png" style="width: 0.34rem;"></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 82%;z-index:0;">
+				</div>
+				<div class="swiper-slide four">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/4444.jpg">
+					<img src="img/44.png" class="shuang">
+					<img src="img/44_con.png" class="four_con">
+					<div class="xiala"><img src="img/xiala-2.png" style="width: 0.34rem;"></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 83.5%;z-index:0;">
+				</div>
+				<div class="swiper-slide five">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/5.png">
+					<img src="img/555.png" class="five_car">
+					<img src="img/55_con.png" class="five_con">
+					<img src="img/55.png" class="rong">
+					<div class="xiala"><img src="img/xiala-2.png" style="width: 0.34rem;"></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 82%;z-index:0;">
+				</div>
+				<div class="swiper-slide six">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/6.png">
+					<img src="img/66.png" class="left">
+					<img src="img/66_con.png" class="six_con">
+					<img src="img/666.png" class="right">
+					<div class="xiala"><img src="img/xiala-2.png" style="width: 0.34rem;"></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 82%;z-index:0;">
+				</div>
+				<div class="swiper-slide seven">
+					<a class="mscBtn" style="cursor:pointer;">
+						<img src="img/yinyue.png" style="width: 0.51rem;display: none;" class="yinyue">
+						<img src="img/clo_yin.png" class="clo_yin" style="width: 0.51rem;">
+					</a>
+					<img src="img/7.png">
+					<img src="img/777.png" class="seven_car">
+					<img src="img/77_con.png" class="seven_con">
+					<img src="img/77.png" class="yize">
+					<div class="xiala"><img src="img/zhishi.png" alt="" style="width: 3.25rem;"/></div>
+					<img src="img/need/share_btn.png" alt="" onclick="get_link()" style="width:2.33rem;height:0.58rem;position: fixed;left:2.585rem;top: 81%;z-index:0;">
+				</div>
+				
+			</div>
+		</div>
+
+	</body>
+
+	<script>
+		$("body").css("height", document.body.clientHeight + "px");
+		var swiperV = new Swiper('.swiper-container', {
+			effect: 'cube',
+			direction: 'vertical',
+			// spaceBetween: 50,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			on: {
+				touchMove: function(event) {
+					$('input').blur();
+					$('select').blur();
+				},
+			},
+		});
+	</script>
+	<script>
+		$(function() {
+			var music = document.getElementById("bgMusic");
+
+			function autoPlayAudio1() {
+				wx.config({
+					// 配置信息, 即使不正确也能使用 wx.ready
+					debug: false,
+					appId: '',
+					timestamp: 1,
+					nonceStr: '',
+					signature: '',
+					jsApiList: []
+				});
+				wx.ready(function() {
+					music.play();
+				});
+			}
+			autoPlayAudio1();
+
+			$(".mscBtn").click(function() {
+				if(music.paused) {
+					music.play();
+					$(".mscBtn").removeClass("pause").addClass("play");
+					$('.clo_yin').css('display', 'block')
+					$('.yinyue').css('display', 'none')
+				} else {
+					music.pause();
+					$(".mscBtn").removeClass("play").addClass("pause");
+					$('.clo_yin').css('display', 'none')
+					$('.yinyue').css('display', 'block')
+				}
+			});
+			$('.yinyue').click(function() {
+				$('.clo_yin').css('display', 'block')
+				$('.yinyue').css('display', 'none')
+			})
+			$('.clo_yin').click(function() {
+				$('.clo_yin').css('display', 'none')
+				$('.yinyue').css('display', 'block')
+			})
+		});
+	</script>
+	<script type="text/javascript">
+		// 点击查看活动规则
+		$("#look_role").click(function() {
+			$("#my_block").show();
+			$("#my_case").show();
+			$('body').addClass('guding');
+		})
+		$("#xx").click(function() {
+				$("#my_block").hide();
+				$("#my_case").hide();
+				$('body').removeClass('guding');
+			})
+			//跳转链接
+		function get_link() {
+			window.location.href = 'index3.html?modFlag='+'jianshe'
+		}
+
+		$('.ka').click(function() {
+			// window.location.replace('https://www.ftms.com.cn/carSellHelp/digiCorolla')
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/corolla_phev'
+		})
+		$('.huang').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/crown'
+		})
+		$('.luo').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/corolla'
+		})
+		$('.shuang').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/corollahev'
+		})
+		$('.rong').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/rav4'
+		})
+		$('.left').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/viosfs'
+		})
+		$('.right').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/vios'
+		})
+		$('.yize').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/izoa'
+		})
+		$('.sida').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/coaster'
+		})
+	</script>
+	<script>
+		$('body').addClass('guding');
+		var pro = 0;
+		//定时函数进行更新
+		var update = setInterval(function() {
+			//进度改变
+			pro++;
+			//文字提示
+			$("#info").text(pro + "%");
+			//动态改变div的宽度占比
+			$("#child").width(pro + "%");
+			var a = $(".che").offset().left;
+			$('.che').animate({
+					left: '87%'
+				}, 3000, 'linear')
+				//控制更新
+			if(pro == 100) {
+				//清除定时器，停止更新
+				clearInterval(update);
+				$('.xianshi_box').css('display', 'none');
+				$('body').removeClass('guding');
+				$('.my_car').addClass('zoomIn');
+				setTimeout(function() {
+					$('.my_car').removeClass('zoomIn');
+				}, 2500)
+			}
+		}, 30);
+	</script>
+	<script type="text/javascript">
+		var url = window.location.href;
+		$.ajax({
+			url:"http://wx.ftms.com.cn/Wechat/GetJssdk/getJssdkConfig",
+			data:{
+				url:url
+			},
+			type: 'POST',
+			dataType:'json',
+			success:function(data){
+				console.log(data)
+				wx.config({
+					debug: false,
+					appId:data.content.appId,
+					timestamp: data.content.timestamp,
+					nonceStr: data.content.nonceStr,
+					signature: data.content.signature,
+					// 需要使用的JS接口列表
+					jsApiList: [
+						'onMenuShareTimeline',
+						'onMenuShareAppMessage',
+						'updateAppMessageShareData',
+						'updateTimelineShareData'
+					]
+				});
+				wx.ready(function() {
+					wx.onMenuShareTimeline({
+						title: '一汽丰田', // 分享标题
+						link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+						imgUrl: 'http://homesite.ftms.devbmsoft.cn/Public/Wechat/activity/FriendsCirclePrize/images/wxfx.jpg', // 分享图标
+						success: function() {
+							// 用户点击了分享后执行的回调函数
+							// doShareDone_p();
+						},
+					});
+				
+					wx.onMenuShareAppMessage({
+						title: '一汽丰田', // 分享标题
+						desc: '一汽丰田面向建设银行员工专属促销活动', // 分享描述
+						link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+						imgUrl: 'http://homesite.ftms.devbmsoft.cn/Public/Wechat/activity/FriendsCirclePrize/images/wxfx.jpg', // 分享图标
+						success: function() {
+							// 用户点击了分享后执行的回调函数
+							// doShareDone_f();
+						}
+					});
+				});
+			},
+			error:function(err){
+				console.log(err)
+			}
+		});
+		
+	</script>
+</html>

@@ -1,0 +1,242 @@
+.one{
+	position: relative;
+}
+.one .ka{
+	position: absolute;
+	top: 26%;
+	right: 0.51rem;
+	width: 2.02rem;
+	height: 1.15rem;
+}
+.one .one_con{
+	position: absolute;
+	width: 3.86rem;
+	height: 1.55rem;
+	top: 65%;
+}
+.one .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 89%;
+	left: 0;
+}
+.one .xiala>img{	
+	height: 100%;
+}
+.two{
+	position: relative;
+}
+.two .huang{
+	position: absolute;
+	top: 24%;
+	left: 1.25rem;
+	width: 2.05rem;
+	height: 1.15rem;
+}
+.two .two_con{
+	position: absolute;
+	width: 4.74rem;
+	height: 1.50rem;
+	top: 65.5%;
+}
+.two .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 89%;
+	left: 0;
+}
+.two .xiala>img{	
+	height: 100%;
+}
+.three{
+	position: relative;
+}
+.three .luo{
+	position: absolute;
+	top: 29%;
+	left: 0.39rem;
+	width: 2.16rem;
+	height: 1.22rem;
+}
+.three .three_con{
+	position: absolute;
+	width: 3.49rem;
+	height: 1.19rem;
+	top: 70.5%;
+}
+.three .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 91%;
+	left: 0;
+}
+.three .xiala>img{	
+	height: 100%;
+}
+.four{
+	position: relative;
+}
+.four .shuang{
+	position: absolute;
+	top: 20%;
+	left: 1.23rem;
+	width: 2.05rem;
+	height: 1.15rem;
+}
+.four .four_con{
+	position: absolute;
+	width: 4.14rem;
+	height: 2rem;
+	top: 63.5%;
+}
+.four .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 90%;
+	left: 0;
+}
+.four .xiala>img{	
+	height: 100%;
+}
+.five{
+	position: relative;
+}
+.five .five_car{
+	position: absolute;
+	width: 100%;
+	height: 4.92rem;
+	top: 23%;
+	left: 0;
+}
+.five .five_con{
+	position: absolute;
+	width: 4.27rem;
+	height: 2.02rem;
+	top: 62%;
+}
+.five .rong{
+	position: absolute;
+	top: 19%;
+	right: 0.61rem;
+	width: 2.05rem;
+	height: 1.15rem;
+}
+.five .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 89%;
+	left: 0;
+}
+.five .xiala>img{	
+	height: 100%;
+}
+.six{
+	position: relative;
+}
+.six .left{
+	position: absolute;
+	top: 23%;
+	left: 1.30rem;
+	width: 1.95rem;
+	height: 1.09rem;
+}
+.six .right{
+	position: absolute;
+	top: 27%;
+	right: 1.95rem;
+	width: 1.75rem;
+	height: 0.98rem;
+}
+.six .six_con{
+	position: absolute;
+	width: 5.78rem;
+	height: 1.68rem;
+	top: 63%;
+}
+.six .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 89%;
+	left: 0;
+}
+.six .xiala>img{	
+	height: 100%;
+}
+.seven{
+	position: relative;
+}
+.seven .seven_car{
+	position: absolute;
+	width: 6.81rem;
+	height: 5.19rem;
+	top: 25%;
+	left: 0;
+}
+.seven .seven_con{
+	position: absolute;
+	width: 4.45rem;
+	height: 1.84rem;
+	top: 61%;
+}
+.seven .yize{
+	position: absolute;
+	top: 21.5%;
+	right: 0.7rem;
+	width: 2.05rem;
+	height: 1.15rem;
+}
+.seven .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 89%;
+	left: 0;
+}
+.seven .xiala>img{	
+	height: 100%;
+}
+.eight{
+	position: relative;
+}
+.eight .sida{
+	position: absolute;
+	top: 36%;
+	right: 0.78rem;
+	width: 2.36rem;
+	height: 1.32rem;
+}
+.eight .eight_car{
+	width: 100%;
+	height: 4.82rem;
+	position: absolute;
+	top: 40%;
+	left: 0;
+}
+.eight .eight_con{
+	width: 4.31rem;
+	height: 0.86rem;
+	position: absolute;
+	top: 71%;
+}
+.eight .xiala{
+	width: 100%;
+	height: 0.18rem;
+	text-align: center;
+	position: absolute;
+	top: 85%;
+	left: 0;
+	color: white;
+}

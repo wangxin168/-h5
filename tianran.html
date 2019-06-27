@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>一汽丰田</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script>
+			document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + "px";
+			window.addEventListener("resize", function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + "px"
+			}, false)
+		</script>
+		<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?87a6f47c75cbf86b7c3b689304b04f00";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+		<link rel="stylesheet" href="css/swiper-4.3.3.min.css">
+		<script src="js/swiper-4.3.3.min.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" href="css/dian.css">
+	</head>
+
+	<body>
+		<div class="xianshi_box">
+			<div class="xianshi">
+				<div class="Loading">Loading...</div>
+				<div class="che"><img src="img/che.png"></div>
+				<div class="load_xian">
+					<img src="img2/load.png">
+				</div>
+				<p id="info"></p>
+			</div>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide sy_bg">
+					<a class="mscBtn o_bth" style="cursor:pointer;">
+						<img src="img2/yinyue.png" style="width: 0.51rem;" class="yinyue">
+						<img src="img2/clo_yin.png" class="clo_yin" style="width: 0.51rem;display: none;">
+					</a>
+					<audio id="bgMusic" src="er.mp3" preload="auto" autoplay="autoplay"></audio>
+					<!-- <img src="img2/top.png" class="sy_top"> -->
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/tianran.png" class="sy_con">
+					<img src="img2/new_bg.png" class="sy_lou">
+					<img src="img2/sy_car.png" class="sy_car">
+					<img src="img2/look.png" class="look">
+					<img src="img2/xiala.png" class="xiala xia_yin">
+
+					<div class="my_case" id="my_case">
+						<div class="my_case_cont_box">
+							<div class="my_case_img" style="margin-top: 0.44rem;">
+								<div class="my_case_title">中国石油天然气集团有限公司</div>
+								<div class="my_case_title" style="margin-top: 0.12rem;">专属优惠</div>
+							</div>
+							<p class="rule_con" style="margin-top: 0.6rem;"><span class="huidian">·</span>参与互动并留下个人信息，即可享受优惠</p>
+							<p class="rule_con"><span class="huidian">·</span>优惠仅限购买所选车型，不可更改</p>
+							<p class="rule_con"><span class="huidian">·</span>享受优惠时，需要提供员工身份证、中国石油天然气集团有限公司相关单位的在职证明（格式不限，但需包含公司名称、地址、联系人姓名和座机号）、直系亲属关系证明（仅限牌城市可直系亲属购车）</p>
+							<p class="rule_con"><span class="huidian">·</span>与一汽丰田其他活动不冲突，可共享</p>
+							<div class="zhengce">优惠政策</div>
+							<ul class="lijian">
+								<li>
+									<span>·</span>
+									<span>CROWN 皇冠</span>
+									<span>立减</span>
+									<span>5000元</span>
+								</li>
+								<li>
+									<span>·</span>
+									<span>COROLLA 卡罗拉</span>
+									<span>立减</span>
+									<span>1000元</span>
+								</li>
+								<li>
+									<span>·</span>
+									<span>VIOS 威驰/FS</span>
+									<span>立减</span>
+									<span>1000元</span>
+								</li>
+								<li>
+									<span>·</span>
+									<span>RAV4 荣放</span>
+									<span>立减</span>
+									<span>3000元</span>
+								</li>
+								<li>
+									<span>·</span>
+									<span>IZOA 奕泽</span>
+									<span>立减</span>
+									<span>3000元</span>
+								</li>
+								<li>
+									<span>·</span>
+									<span>卡罗拉双擎</span>
+									<span>立减</span>
+									<span>1000元</span>
+								</li>
+								<li>
+									<span>·</span>
+									<span>卡罗拉双擎E+</span>
+									<span>立减</span>
+									<span>5000元</span>
+								</li>
+							</ul>
+							<div class="shuoming">活动说明：</div>
+							<div class="shuoming" style="margin-top: 0.1rem;">在经销店最终议价基础上从车款中立减以上优惠政策</div>
+							<img src="img2/youh.png" alt="" class="liji" onclick="get_link()">
+
+						</div>
+						<img src="img2/close.png" class="close">
+					</div>
+				</div>
+				<div class="swiper-slide xq_box">
+					<!-- <a class="mscBtn t_btn" style="cursor:pointer;">
+						<img src="img2/yinyue2.png" style="width: 0.51rem;" class="yinyue">
+						<img src="img2/clo_yin2.png" class="clo_yin" style="width: 0.51rem;display: none;">
+					</a> -->
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/kae.png" class="xinf">
+					<img src="img2/xiala.png" class="xiala">
+					<img src="img2/h_youh.png" class="youh" onclick="get_link()">
+					<img src="img2/logo/ejia.png" class="ejia">
+				</div>
+				<div class="swiper-slide xq_box">
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/huangg.png" class="xinf">
+					<img src="img2/xiala.png" class="xiala">
+					<img src="img2/h_youh.png" class="youh" onclick="get_link()">
+					<img src="img2/logo/huang.png" class="huang">
+				</div>
+				<div class="swiper-slide xq_box">
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/kall.png" class="xinf">
+					<img src="img2/xiala.png" class="xiala">
+					<img src="img2/h_youh.png" class="youh" onclick="get_link()">
+					<img src="img2/logo/ka.png" class="ka">
+				</div>
+				<div class="swiper-slide xq_box">
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/kas.png" class="xinf">
+					<img src="img2/xiala.png" class="xiala">
+					<img src="img2/h_youh.png" class="youh" onclick="get_link()">
+					<img src="img2/logo/shuangq.png" class="shuangq">
+				</div>
+				<div class="swiper-slide xq_box">
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/rav4.png" class="xinf">
+					<img src="img2/xiala.png" class="xiala">
+					<img src="img2/h_youh.png" class="youh" onclick="get_link()">
+					<img src="img2/logo/rong.png" class="rong">
+				</div>
+				<div class="swiper-slide xq_box">
+					<img src="img2/logo.png" class="logo">
+					<img src="img2/logo/weichi.png" class="xinf">
+					<img src="img2/xiala.png" class="xiala">
+					<img src="img2/h_youh.png" class="youh" onclick="get_link()">
+					<img src="img2/logo/weichip.png" class="weichip">
+					<img src="img2/logo/weichifs.png" class="weichifs">
+				</div>
+				<div class="swiper-slide xq_box last_con">
+					<div style="width: 100%;height: 100%;" onclick="get_link()">
+						<img src="img2/logo.png" class="logo">
+						<img src="img2/logo/yize.png" class="xinf">
+						<img src="img/zhishi.png" class="zhishi">
+						<img src="img2/h_youh.png" class="youh">
+					</div>
+					<img src="img2/logo/yizep.png" class="yizep">
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+	<script>
+		// 音乐
+		$(function() {
+			var music = document.getElementById("bgMusic");
+
+			function autoPlayAudio1() {
+				wx.config({
+					// 配置信息, 即使不正确也能使用 wx.ready
+					debug: false,
+					appId: '',
+					timestamp: 1,
+					nonceStr: '',
+					signature: '',
+					jsApiList: []
+				});
+				wx.ready(function() {
+					music.play();
+				});
+			}
+			autoPlayAudio1();
+
+			$(".mscBtn").click(function() {
+				if (music.paused) {
+					music.play();
+					$(".mscBtn").removeClass("pause").addClass("play");
+					$('.clo_yin').css('display', 'none')
+					$('.yinyue').css('display', 'block')
+				} else {
+					music.pause();
+					$(".mscBtn").removeClass("play").addClass("pause");
+					$('.clo_yin').css('display', 'block')
+					$('.yinyue').css('display', 'none')
+				}
+			});
+			$('.yinyue').click(function() {
+				$('.clo_yin').css('display', 'block')
+				$('.yinyue').css('display', 'none')
+			})
+			$('.clo_yin').click(function() {
+				$('.clo_yin').css('display', 'none')
+				$('.yinyue').css('display', 'block')
+			})
+		});
+	</script>
+	<script>
+		//跳转链接
+		function get_link() {
+			window.location.href = 'liuzi.html?modFlag=' + 'tianran'
+		}
+
+		var height = document.body.clientHeight;
+		// alert(height)
+		if (height > 603) {
+			$('.xinf').css('margin-top', '1.2rem')
+			$('.youh').css('top', '9.68rem')
+			$('.look').css('margin-top', '3.53rem')
+			$('.xia_yin').css('margin-top','0.55rem')
+		} else {
+			$('.xq_box .xiala').css('margin-top', '0.26rem')
+			$('.t_btn').css('top', '2.11rem')
+			$('.ejia').css('top','4.2rem')
+			$('.huang').css('top','3.9rem')
+			$('.ka').css('top','4rem')
+			$('.shuangq').css('top','3.6rem')
+			$('.rong').css('top','3.6rem')
+			$('.weichip').css('top','3.9rem')
+			$('.weichifs').css('top','3.8rem')
+			$('.yizep').css('top','3.5rem')
+		}
+	</script>
+	<script>
+		// 苹果手机返回刷新页面
+		if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
+			window.onpageshow = function(event) {
+				if (event.persisted) {
+					window.location.reload()
+				}
+			};
+		} else {
+			onload = function() {
+				var refreshedId = document.getElementById("refreshed");
+				if (refreshedId.value == "no") {
+					refreshedId.value = "yes";
+				} else {
+					refreshedId.value = "no";
+					location.reload();
+				}
+			}
+		}
+		$(window).bind("unload", function() {});
+		var u = navigator.userAgent;
+		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { //安卓手机
+			$('.che').css('top','6.08rem')
+		} else if (u.indexOf('iPhone') > -1) { //苹果手机
+			$('.che').css('top','6.2rem')
+		}
+		$("body").css("height", document.body.clientHeight + "px");
+		var swiperV = new Swiper('.swiper-container', {
+			effect: 'cube',
+			direction: 'vertical',
+			// spaceBetween: 50,
+			preventClicks: false
+		});
+		
+	</script>
+
+	<script type="text/javascript">
+		// 点击查看活动规则 
+		$(".look").click(function() {
+			$("#my_case").show();
+			$(".xia_yin").hide();
+			$(".look").hide();
+			$('body').addClass('guding');
+		})
+		$(".close").click(function() {
+			$("#my_case").hide();
+			$(".look").show();
+			$(".xia_yin").show();
+			$('body').removeClass('guding');
+		})
+
+		// 牌子跳转官网
+		$('.ejia').click(function() {
+			// window.location.replace('https://www.ftms.com.cn/carSellHelp/digiCorolla')
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/corolla_phev'
+		})
+		$('.huang').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/crown'
+		})
+		$('.ka').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/corolla'
+		})
+		$('.shuangq').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/corollahev'
+		})
+		$('.rong').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/rav4'
+		})
+		$('.weichifs').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/viosfs'
+		})
+		$('.weichip').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/vios'
+		})
+		$('.yizep').click(function() {
+			window.location.href = 'https://m.ftms.com.cn/buycar/cartype/detail/izoa'
+		})
+	</script>
+	<script>
+		$('body').addClass('guding');
+
+		var pro = 0;
+		//定时函数进行更新
+		var update = setInterval(function() {
+			//进度改变
+			pro++;
+			//文字提示
+			$("#info").text(pro + "%");
+			//动态改变div的宽度占比
+			// $("#child").width(pro + "%");
+			var a = $(".che").offset().left;
+			$('.che').animate({
+				left: '87%'
+			}, 3000, 'linear')
+			//控制更新
+			if (pro == 100) {
+				//清除定时器，停止更新
+				clearInterval(update);
+				$('.xianshi_box').css('display', 'none');
+				$('.sy_car').addClass('zoomIn');
+				$('body').removeClass('guding');
+				setTimeout(function() {
+					$('sy_car').removeClass('zoomIn');
+				}, 2500)
+			}
+		}, 30);
+	</script>
+
+	<script type="text/javascript">
+		var url = window.location.href;
+		$.ajax({
+			url: "http://wx.ftms.com.cn/Wechat/GetJssdk/getJssdkConfig",
+			data: {
+				url: url
+			},
+			type: 'POST',
+			dataType: 'json',
+			success: function(data) {
+				console.log(data)
+				wx.config({
+					debug: false,
+					appId: data.content.appId,
+					timestamp: data.content.timestamp,
+					nonceStr: data.content.nonceStr,
+					signature: data.content.signature,
+					// 需要使用的JS接口列表
+					jsApiList: [
+						'onMenuShareTimeline',
+						'onMenuShareAppMessage',
+						'updateAppMessageShareData',
+						'updateTimelineShareData'
+					]
+				});
+				wx.ready(function() {
+					wx.onMenuShareTimeline({
+						title: '一汽丰田', // 分享标题
+						link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+						imgUrl: 'http://homesite.ftms.devbmsoft.cn/Public/Wechat/activity/FriendsCirclePrize/images/wxfx.jpg', // 分享图标
+						success: function() {
+							// 用户点击了分享后执行的回调函数
+							// doShareDone_p();
+						},
+					});
+
+					wx.onMenuShareAppMessage({
+						title: '一汽丰田', // 分享标题
+						desc: '一汽丰田面向中国石油天然气集团有限公司员工专属促销活动', // 分享描述
+						link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+						imgUrl: 'http://homesite.ftms.devbmsoft.cn/Public/Wechat/activity/FriendsCirclePrize/images/wxfx.jpg', // 分享图标
+						success: function() {
+							// 用户点击了分享后执行的回调函数
+							// doShareDone_f();
+						}
+					});
+				});
+			},
+			error: function(err) {
+				console.log(err)
+			}
+		});
+	</script>
+	<!--微信分享-->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</html>
